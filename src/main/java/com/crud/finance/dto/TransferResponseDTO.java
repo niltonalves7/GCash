@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class TransferRequestDTO {
+public class TransferResponseDTO {
     public String Name;
     public Double Amount;
     public TransferCategory TransferCategory;

@@ -15,7 +15,7 @@ public class TransferValidator {
             throw new IllegalArgumentException("The value must be greater than zero!");
         }
 
-        if(!dto.getCategory().equals("DEPOSIT") && !dto.getCategory().equals("WITHDROW")){
+        if(!dto.getTransferCategory().name().equals("DEPOSIT") && !dto.getTransferCategory().name().equals("WITHDROW")){
             throw new IllegalArgumentException(("Invalid Category"));
         }
 
