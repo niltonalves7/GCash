@@ -8,6 +8,7 @@ import com.crud.finance.repository.TransferRepository;
 import com.crud.finance.transferMapper.TransferMapper;
 import com.crud.finance.validator.TransferValidator;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.ResourceAccessException;
 
 import java.util.List;
 
@@ -35,5 +36,25 @@ public class TransferService {
             throw new EmptyListException("Empty list");
         }
         return transfers;
+    }
+
+    public TransferResponseDTO getTransferById(Long id){
+        Transfer transferById = transferRepository.findById(id)
+                .orElseThrow(() -> new ResourceAccessException("Transfer not found with id " + id));
+        return TransferMapper.toDTO(transferById);
+    }
+
+    public TransferResponseDTO updateTransfer(Long id, TransferRequestDTO dto){
+        transferValidator.validate(dto);
+        Transfer transferExist = transferRepository.findById(id)
+                .orElseThrow(() -> new ResourceAccessException("Transfer not found with id " + id));
+
+        transferExist.setName(dto.getName());
+        transferExist.setAmount(dto.getAmount());
+        transferExist.setTransferCategory(dto.getTransferCategory());
+        transferExist.setDate(dto.getDate());
+
+        Transfer transferUpdated = transferRepository.save(transferExist);
+        return TransferMapper.toDTO(transferUpdated);
     }
 }

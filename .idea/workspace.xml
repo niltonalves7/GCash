@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="553e6a30-c06a-4840-8476-7b63373b5741" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/exceptions/EmptyListException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/exceptions/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/application/FinanceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/FinanceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/controller/TransferController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/controller/TransferController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/dto/TransferRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/dto/TransferRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/dto/TransferResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/dto/TransferResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/model/Transfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/model/Transfer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/service/TransferService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/service/TransferService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/transferMapper/TransferMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/transferMapper/TransferMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/validator/TransferValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/validator/TransferValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +62,13 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.crud.finance" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
