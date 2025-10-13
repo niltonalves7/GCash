@@ -2,24 +2,30 @@ package com.crud.finance.controller;
 
 import com.crud.finance.dto.TransferRequestDTO;
 import com.crud.finance.dto.TransferResponseDTO;
+import com.crud.finance.model.Transfer;
 import com.crud.finance.service.TransferService;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "*")
+import java.util.List;
+
 @RestController
 @RequestMapping("/transfer")
+@CrossOrigin(origins = "*")
 public class TransferController {
+
     private final TransferService transferService;
 
     public TransferController(TransferService transferService) {
         this.transferService = transferService;
     }
 
-    @PostMapping
-    public ResponseEntity<TransferResponseDTO> create(@RequestBody TransferRequestDTO dto) {
-        TransferResponseDTO response = transferService.create(dto);
-        return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    @GetMapping()
+    public List<Transfer> getAllTransfers(){
+        return transferService.getAllTransfers();
+    }
+
+    @PostMapping()
+    public TransferResponseDTO createTransfer(@RequestBody TransferRequestDTO dto ){
+        return transferService.createTransfer(dto);
     }
 }

@@ -11,9 +11,9 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TransferRequestDTO {
-    public String Name;
-    public Double Amount;
-    public TransferCategory TransferCategory;
-    public LocalDate Date = LocalDate.now();
-    public String Description;
+    public String name;
+    public Double amount;
+    public TransferCategory transferCategory;
+    public LocalDate date = LocalDate.now();
+    public String description;
 }
