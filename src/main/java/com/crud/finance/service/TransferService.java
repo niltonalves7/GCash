@@ -53,8 +53,15 @@ public class TransferService {
         transferExist.setAmount(dto.getAmount());
         transferExist.setTransferCategory(dto.getTransferCategory());
         transferExist.setDate(dto.getDate());
+        transferExist.setDescription(dto.getDescription());
 
         Transfer transferUpdated = transferRepository.save(transferExist);
         return TransferMapper.toDTO(transferUpdated);
+    }
+
+    public void deleteTransfer(Long id){
+        Transfer transferById = transferRepository.findById(id)
+                .orElseThrow(() -> new ResourceAccessException("Transfer not found with id " + id));
+        transferRepository.deleteById(id);
     }
 }

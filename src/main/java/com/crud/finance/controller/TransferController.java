@@ -37,8 +37,14 @@ public class TransferController {
         return ResponseEntity.status(HttpStatus.CREATED).body(transferService.createTransfer(dto));
     }
 
-    @PostMapping("/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<TransferResponseDTO> updateTransfer(@PathVariable Long id, @RequestBody TransferRequestDTO dto){
         return ResponseEntity.ok(transferService.updateTransfer(id, dto));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteTransfer(@PathVariable Long id){
+        transferService.deleteTransfer(id);
+        return ResponseEntity.noContent().build();
     }
 }
