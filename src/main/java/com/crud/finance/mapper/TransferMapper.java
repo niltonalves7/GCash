@@ -1,7 +1,7 @@
-package com.crud.finance.transferMapper;
+package com.crud.finance.mapper;
 
-import com.crud.finance.dto.TransferRequestDTO;
-import com.crud.finance.dto.TransferResponseDTO;
+import com.crud.finance.dto.request.TransferRequestDTO;
+import com.crud.finance.dto.response.TransferResponseDTO;
 import com.crud.finance.model.Transfer;
 
 import java.time.LocalDate;

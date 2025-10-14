@@ -1,11 +1,11 @@
 package com.crud.finance.service;
 
-import com.crud.finance.dto.TransferRequestDTO;
-import com.crud.finance.dto.TransferResponseDTO;
+import com.crud.finance.dto.request.TransferRequestDTO;
+import com.crud.finance.dto.response.TransferResponseDTO;
 import com.crud.finance.exceptions.EmptyListException;
 import com.crud.finance.model.Transfer;
 import com.crud.finance.repository.TransferRepository;
-import com.crud.finance.transferMapper.TransferMapper;
+import com.crud.finance.mapper.TransferMapper;
 import com.crud.finance.validator.TransferValidator;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.ResourceAccessException;

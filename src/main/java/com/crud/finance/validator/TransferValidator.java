@@ -1,6 +1,6 @@
 package com.crud.finance.validator;
 
-import com.crud.finance.dto.TransferRequestDTO;
+import com.crud.finance.dto.request.TransferRequestDTO;
 import org.springframework.stereotype.Component;
 
 @Component()

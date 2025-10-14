@@ -1,7 +1,7 @@
 package com.crud.finance.controller;
 
-import com.crud.finance.dto.TransferRequestDTO;
-import com.crud.finance.dto.TransferResponseDTO;
+import com.crud.finance.dto.request.TransferRequestDTO;
+import com.crud.finance.dto.response.TransferResponseDTO;
 import com.crud.finance.model.Transfer;
 import com.crud.finance.service.TransferService;
 import org.springframework.http.HttpStatus;
