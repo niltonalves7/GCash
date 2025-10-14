@@ -3,6 +3,7 @@ package com.crud.finance.service;
 import com.crud.finance.dto.request.TransferRequestDTO;
 import com.crud.finance.dto.response.TransferResponseDTO;
 import com.crud.finance.exceptions.EmptyListException;
+import com.crud.finance.exceptions.ResourceNotFoundException;
 import com.crud.finance.model.Transfer;
 import com.crud.finance.repository.TransferRepository;
 import com.crud.finance.mapper.TransferMapper;
@@ -40,14 +41,14 @@ public class TransferService {
 
     public TransferResponseDTO getTransferById(Long id){
         Transfer transferById = transferRepository.findById(id)
-                .orElseThrow(() -> new ResourceAccessException("Transfer not found with id " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Transfer not found with id " + id));
         return TransferMapper.toDTO(transferById);
     }
 
     public TransferResponseDTO updateTransfer(Long id, TransferRequestDTO dto){
         transferValidator.validate(dto);
         Transfer transferExist = transferRepository.findById(id)
-                .orElseThrow(() -> new ResourceAccessException("Transfer not found with id " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Transfer not found with id " + id));
 
         transferExist.setName(dto.getName());
         transferExist.setAmount(dto.getAmount());
@@ -61,7 +62,7 @@ public class TransferService {
 
     public void deleteTransfer(Long id){
         Transfer transferById = transferRepository.findById(id)
-                .orElseThrow(() -> new ResourceAccessException("Transfer not found with id " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Transfer not found with id " + id));
         transferRepository.deleteById(id);
     }
 }
