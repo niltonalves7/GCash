@@ -22,7 +22,7 @@ public class TransferMapper {
         Transfer transfer = new Transfer();
         transfer.setName(dto.getName());
         transfer.setAmount(dto.getAmount());
-        transfer.setTransferCategory(dto.getTransferCategory());
+        transfer.setTransferType(dto.getTransferType());
         transfer.setDate(LocalDate.now());
         transfer.setDescription(dto.getDescription());
         return transfer;

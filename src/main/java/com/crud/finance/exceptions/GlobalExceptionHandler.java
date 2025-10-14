@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -24,7 +25,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(EmptyListException.class)
     public ResponseEntity<Object> handleEmptyListException(EmptyListException exception) {
-        return buildResponse(HttpStatus.NO_CONTENT, exception.getMessage());
+        return buildResponse(HttpStatus.NOT_FOUND, exception.getMessage());
     }
 
     @ExceptionHandler(UnauthorizedException.class)
@@ -50,7 +51,7 @@ public class GlobalExceptionHandler {
 
     private ResponseEntity<Object> buildResponse(HttpStatus status, String message) {
         Map<String, Object> body = new LinkedHashMap<>();
-        body.put("timestamp", LocalDateTime.now());
+        body.put("timestamp", LocalDate.now());
         body.put("status", status.value());
         body.put("error", status.getReasonPhrase());
         body.put("message", message);

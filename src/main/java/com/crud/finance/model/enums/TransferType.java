@@ -1,6 +1,6 @@
 package com.crud.finance.model.enums;
 
-public enum TransferCategory {
+public enum TransferType {
     DEPOSIT,
     WITHDROW
 }

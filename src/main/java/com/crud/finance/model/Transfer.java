@@ -1,9 +1,10 @@
 package com.crud.finance.model;
 
-import com.crud.finance.model.enums.TransferCategory;
+import com.crud.finance.model.enums.TransferType;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Data
@@ -16,11 +17,11 @@ public class Transfer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id private int id;
 
-    public String name;
-    public Double amount;
-    public LocalDate date;
-    public String description;
+    private String name;
+    private BigDecimal amount;
+    private LocalDate date;
+    private String description;
 
     @Enumerated(EnumType.STRING)
-    public TransferCategory transferCategory;
+    private TransferType transferType;
 }

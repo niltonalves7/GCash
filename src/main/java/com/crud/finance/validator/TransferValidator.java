@@ -4,6 +4,8 @@ import com.crud.finance.dto.request.TransferRequestDTO;
 import com.crud.finance.exceptions.BadRequestException;
 import org.springframework.stereotype.Component;
 
+import java.math.BigDecimal;
+
 @Component()
 public class TransferValidator {
 
@@ -12,11 +14,11 @@ public class TransferValidator {
             throw new BadRequestException("Name is required!");
         }
 
-        if(dto.getAmount() <= 0){
+        if(dto.getAmount().compareTo(BigDecimal.ZERO) <= 0){
             throw new BadRequestException("The value must be greater than zero!");
         }
 
-        if(!dto.getTransferCategory().name().equals("DEPOSIT") && !dto.getTransferCategory().name().equals("WITHDROW")){
+        if(!dto.getTransferType().name().equals("DEPOSIT") && !dto.getTransferType().name().equals("WITHDROW")){
             throw new BadRequestException(("Invalid Category"));
         }
 

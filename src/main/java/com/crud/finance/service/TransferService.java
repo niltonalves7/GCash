@@ -51,7 +51,7 @@ public class TransferService {
 
         transferExist.setName(dto.getName());
         transferExist.setAmount(dto.getAmount());
-        transferExist.setTransferCategory(dto.getTransferCategory());
+        transferExist.setTransferType(dto.getTransferType());
         transferExist.setDate(dto.getDate());
         transferExist.setDescription(dto.getDescription());
 
