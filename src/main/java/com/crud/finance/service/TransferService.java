@@ -9,7 +9,6 @@ import com.crud.finance.repository.TransferRepository;
 import com.crud.finance.mapper.TransferMapper;
 import com.crud.finance.validator.TransferValidator;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.ResourceAccessException;
 
 import java.util.List;
 
