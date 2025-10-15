@@ -1,10 +1,10 @@
 package com.crud.finance.repository;
 
-import com.crud.finance.model.Transfer;
+import com.crud.finance.model.Transaction;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface TransferRepository extends JpaRepository<Transfer, Long> {
+public interface TransactionRepository extends JpaRepository<Transaction, Long> {
 
 }

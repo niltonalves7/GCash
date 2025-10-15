@@ -1,16 +1,16 @@
 package com.crud.finance.validator;
 
-import com.crud.finance.dto.request.TransferRequestDTO;
+import com.crud.finance.dto.request.TransactionRequestDTO;
 import com.crud.finance.exceptions.BadRequestException;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 
 @Component()
-public class TransferValidator {
+public class TransactionValidator {
 
-    public void validate(TransferRequestDTO dto){
-        if(dto.getName() == null){
+    public static void validate(TransactionRequestDTO dto){
+        if(dto.getUser() == null){
             throw new BadRequestException("Name is required!");
         }
 
@@ -18,7 +18,7 @@ public class TransferValidator {
             throw new BadRequestException("The value must be greater than zero!");
         }
 
-        if(!dto.getTransferType().name().equals("DEPOSIT") && !dto.getTransferType().name().equals("WITHDROW")){
+        if(!dto.getTransactionType().name().equals("DEPOSIT") && !dto.getTransactionType().name().equals("WITHDROW")){
             throw new BadRequestException(("Invalid Category"));
         }
 

@@ -1,6 +1,7 @@
 package com.crud.finance.dto.request;
 
-import com.crud.finance.model.enums.TransferType;
+import com.crud.finance.model.User;
+import com.crud.finance.model.enums.TransactionType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,10 +12,10 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class TransferRequestDTO {
-    private String name;
+public class TransactionRequestDTO {
+    private User user;
     private BigDecimal amount;
-    private TransferType transferType;
+    private TransactionType transactionType;
     private LocalDate date = LocalDate.now();
     private String description;
 }

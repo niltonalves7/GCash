@@ -1,6 +1,6 @@
 package com.crud.finance.model;
 
-import com.crud.finance.model.enums.TransferType;
+import com.crud.finance.model.enums.TransactionType;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -12,16 +12,21 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Entity
 @Table(name = "Transfers")
-public class Transfer {
+public class Transaction {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id private int id;
+    @Id private Long id;
 
-    private String name;
+    @ManyToOne
+    private User user;
+
     private BigDecimal amount;
     private LocalDate date;
     private String description;
 
     @Enumerated(EnumType.STRING)
-    private TransferType transferType;
+    private TransactionType transactionType;
+
+    @ManyToOne
+    private Account account;
 }
