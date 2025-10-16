@@ -1,6 +1,5 @@
 package com.crud.finance.dto.response;
 
-import com.crud.finance.model.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

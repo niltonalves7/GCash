@@ -5,27 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="553e6a30-c06a-4840-8476-7b63373b5741" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/dto/request/UserRequestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/dto/response/UserResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/model/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/repository/AccountRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/service/AccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/validator/UserValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/controller/TransferController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/controller/TransactionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/dto/request/TransferRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/dto/request/TransactionRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/dto/response/TransferResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/dto/response/TransactionResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/mapper/TransferMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/mapper/TransactionMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/model/Transfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/model/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/model/enums/TransferType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/model/enums/TransactionType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/repository/TransferRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/repository/TransactionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/service/TransferService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/service/TransactionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/validator/TransferValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/validator/TransactionValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/controller/TransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/controller/TransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/dto/response/UserResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/dto/response/UserResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/exceptions/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/exceptions/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/model/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/model/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/repository/AccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/repository/TransactionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/repository/TransactionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/service/AccountService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/service/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/service/TransactionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
