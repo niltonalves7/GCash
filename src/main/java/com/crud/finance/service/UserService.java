@@ -8,6 +8,7 @@ import com.crud.finance.mapper.UserMapper;
 import com.crud.finance.model.User;
 import com.crud.finance.repository.UserRepository;
 import com.crud.finance.validator.UserValidator;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,10 +19,12 @@ import java.util.concurrent.ThreadLocalRandom;
 public class UserService {
 
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
 
+        this.passwordEncoder = passwordEncoder;
     }
 
     public List<User> getAllUsers(){
@@ -49,6 +52,7 @@ public class UserService {
         String accountNumber = generateUniqueAccountNumber();
         User user = UserMapper.toEntity(dto);
         user.setAccountNumber(accountNumber);
+        user.setPassword(passwordEncoder.encode(dto.getPassword()));
         userRepository.save(user);
 
         return UserMapper.toDTO(user);
