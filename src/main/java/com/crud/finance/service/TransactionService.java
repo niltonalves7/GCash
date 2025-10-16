@@ -11,24 +11,25 @@ import com.crud.finance.validator.TransactionValidator;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class TransactionService {
 
     private final TransactionRepository transactionRepository;
 
-    public TransactionService(TransactionRepository transactionRepository, TransactionValidator transactionValidator) {
+    public TransactionService(TransactionRepository transactionRepository) {
         this.transactionRepository = transactionRepository;
     }
 
-    public TransactionResponseDTO createTransfer(TransactionRequestDTO dto){
+    public TransactionResponseDTO createTransaction(TransactionRequestDTO dto){
         TransactionValidator.validate(dto);
         Transaction transaction = TransactionMapper.toEntity(dto);
         Transaction saved = transactionRepository.save(transaction);
         return TransactionMapper.toDTO(saved);
     }
 
-    public List<Transaction> getAllTransfers(){
+    public List<Transaction> getAllTransactions(){
         List<Transaction> transactions = transactionRepository.findAll();
         if(transactions.isEmpty()){
             throw new EmptyListException("Empty list");
@@ -36,13 +37,13 @@ public class TransactionService {
         return transactions;
     }
 
-    public TransactionResponseDTO getTransferById(Long id){
+    public TransactionResponseDTO getTransactionById(UUID id){
         Transaction transactionById = transactionRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Transfer not found with id " + id));
         return TransactionMapper.toDTO(transactionById);
     }
 
-    public TransactionResponseDTO updateTransfer(Long id, TransactionRequestDTO dto){
+    public TransactionResponseDTO updateTransaction(UUID id, TransactionRequestDTO dto){
         TransactionValidator.validate(dto);
         Transaction transactionExist = transactionRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Transfer not found with id " + id));
@@ -57,7 +58,7 @@ public class TransactionService {
         return TransactionMapper.toDTO(transactionUpdated);
     }
 
-    public void deleteTransfer(Long id){
+    public void deleteTransaction(UUID id){
         Transaction transactionById = transactionRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Transfer not found with id " + id));
         transactionRepository.deleteById(id);
