@@ -6,6 +6,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+import java.util.UUID;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -14,13 +17,12 @@ import lombok.NoArgsConstructor;
 @Table(name = "users")
 public class User {
 
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id private long id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    @Id private UUID id;
 
     private String name;
     private String password;
     private String email;
-
-    @OneToOne
-    private Account account;
+    private String accountNumber;
+    private BigDecimal balance = BigDecimal.ZERO;
 }

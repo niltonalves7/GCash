@@ -6,6 +6,7 @@ import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.UUID;
 
 @Data
 @NoArgsConstructor
@@ -14,8 +15,8 @@ import java.time.LocalDate;
 @Table(name = "Transfers")
 public class Transaction {
 
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id private Long id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    @Id private UUID id;
 
     @ManyToOne
     private User user;
@@ -26,7 +27,4 @@ public class Transaction {
 
     @Enumerated(EnumType.STRING)
     private TransactionType transactionType;
-
-    @ManyToOne
-    private Account account;
 }

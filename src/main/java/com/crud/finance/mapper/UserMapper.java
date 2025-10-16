@@ -4,8 +4,6 @@ import com.crud.finance.dto.request.UserRequestDTO;
 import com.crud.finance.dto.response.UserResponseDTO;
 import com.crud.finance.model.User;
 
-import java.math.BigDecimal;
-
 public class UserMapper {
 
     public static User toEntity(UserRequestDTO dto) {
@@ -21,19 +19,11 @@ public class UserMapper {
     public static UserResponseDTO toDTO(User user) {
         if (user == null) return null;
 
-        String accountNumber = null;
-        BigDecimal balance = BigDecimal.ZERO;
-
-        if(user.getAccount() != null) {
-            accountNumber = user.getAccount().getAccountNumber();
-            balance = user.getAccount().getBalance();
-        }
-
         return new UserResponseDTO(
                 user.getName(),
                 user.getEmail(),
-                accountNumber,
-                balance
+                user.getAccountNumber(),
+                user.getBalance()
         );
     }
 }
