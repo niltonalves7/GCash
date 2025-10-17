@@ -1,6 +1,6 @@
 package com.crud.finance.validator;
 
-import com.crud.finance.dto.request.UserRequestDTO;
+import com.crud.finance.dto.request.RegisterRequestDTO;
 import com.crud.finance.exceptions.BadRequestException;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +13,7 @@ public class UserValidator {
             "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$"
     );
 
-    public static void validate(UserRequestDTO dto){
+    public static void validate(RegisterRequestDTO dto){
         if(dto == null){
             throw new BadRequestException("fill in the required fields!");
         }

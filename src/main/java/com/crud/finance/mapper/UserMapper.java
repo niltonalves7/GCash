@@ -1,12 +1,12 @@
 package com.crud.finance.mapper;
 
-import com.crud.finance.dto.request.UserRequestDTO;
-import com.crud.finance.dto.response.UserResponseDTO;
+import com.crud.finance.dto.request.RegisterRequestDTO;
+import com.crud.finance.dto.response.RegisterResponseDTO;
 import com.crud.finance.model.User;
 
 public class UserMapper {
 
-    public static User toEntity(UserRequestDTO dto) {
+    public static User toEntity(RegisterRequestDTO dto) {
         if (dto == null) return null;
 
         User user = new User();
@@ -16,10 +16,10 @@ public class UserMapper {
         return user;
     }
 
-    public static UserResponseDTO toDTO(User user) {
+    public static RegisterResponseDTO toDTO(User user) {
         if (user == null) return null;
 
-        return new UserResponseDTO(
+        return new RegisterResponseDTO(
                 user.getName(),
                 user.getEmail(),
                 user.getAccountNumber(),
