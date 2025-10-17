@@ -1,8 +1,8 @@
 package com.crud.finance.controller;
 
 
-import com.crud.finance.dto.request.UserRequestDTO;
-import com.crud.finance.dto.response.UserResponseDTO;
+import com.crud.finance.dto.request.RegisterRequestDTO;
+import com.crud.finance.dto.response.RegisterResponseDTO;
 import com.crud.finance.model.User;
 import com.crud.finance.service.UserService;
 import org.springframework.http.HttpStatus;
@@ -29,17 +29,12 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<UserResponseDTO> getUserById(@PathVariable UUID id){
+    public ResponseEntity<RegisterResponseDTO> getUserById(@PathVariable UUID id){
         return ResponseEntity.ok(userService.getUserById(id));
     }
 
-    @PostMapping
-    public ResponseEntity<UserResponseDTO> registerUser(@RequestBody UserRequestDTO dto) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(userService.registerUser(dto));
-    }
-
     @PutMapping("/{id}")
-    public ResponseEntity<UserResponseDTO> updateUser(@PathVariable UUID id, @RequestBody UserRequestDTO dto) {
+    public ResponseEntity<RegisterResponseDTO> updateUser(@PathVariable UUID id, @RequestBody RegisterRequestDTO dto) {
         return ResponseEntity.ok(userService.updateUser(id, dto));
     }
 
