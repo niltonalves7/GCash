@@ -1,4 +1,4 @@
-package com.crud.finance.config;
+package com.crud.finance.security.jwt;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
