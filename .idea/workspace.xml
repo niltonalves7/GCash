@@ -5,20 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="553e6a30-c06a-4840-8476-7b63373b5741" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/security/jwt/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/security/jwt/JwtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/service/CustomUserDetailsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/dto/request/UserRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/dto/request/RegisterRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/dto/response/LoginResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/dto/response/LoginResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/dto/response/UserResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/dto/response/RegisterResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/service/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/validator/UserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/validator/UserValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/security/jwt/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/security/jwt/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crud/finance/security/jwt/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/crud/finance/security/jwt/JwtService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
