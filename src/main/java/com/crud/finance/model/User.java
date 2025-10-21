@@ -19,7 +19,7 @@ import java.util.UUID;
 @Builder
 @Entity
 @Table(name = "users")
-public class User implements UserDetails {
+public class User {
 
     @GeneratedValue(strategy = GenerationType.UUID)
     @Id private UUID id;
@@ -30,33 +30,7 @@ public class User implements UserDetails {
     private String accountNumber;
     private BigDecimal balance = BigDecimal.ZERO;
 
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of();
-    }
+    private String role;
 
-    @Override
-    public String getUsername() {
-        return "";
-    }
 
-    @Override
-    public boolean isAccountNonExpired() {
-        return UserDetails.super.isAccountNonExpired();
-    }
-
-    @Override
-    public boolean isAccountNonLocked() {
-        return UserDetails.super.isAccountNonLocked();
-    }
-
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return UserDetails.super.isCredentialsNonExpired();
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return UserDetails.super.isEnabled();
-    }
 }
