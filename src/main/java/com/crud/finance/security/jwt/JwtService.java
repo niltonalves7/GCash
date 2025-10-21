@@ -39,7 +39,6 @@ public class JwtService {
                 .compact();
     }
 
-
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
     }
@@ -64,7 +63,7 @@ public class JwtService {
 
     private Claims extractAllClaims(String token) {
         return io.jsonwebtoken.Jwts.parser()
-                .setSigningKey(getSigningKey()) // chave secreta convertida em Key
+                .setSigningKey(getSigningKey())
                 .build()
                 .parseClaimsJws(token)
                 .getBody();
