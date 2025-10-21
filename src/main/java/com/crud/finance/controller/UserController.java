@@ -5,7 +5,6 @@ import com.crud.finance.dto.request.RegisterRequestDTO;
 import com.crud.finance.dto.response.RegisterResponseDTO;
 import com.crud.finance.model.User;
 import com.crud.finance.service.UserService;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
