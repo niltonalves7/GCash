@@ -5,7 +5,7 @@ import com.crud.finance.dto.response.RegisterResponseDTO;
 import com.crud.finance.exceptions.EmptyListException;
 import com.crud.finance.exceptions.ResourceNotFoundException;
 import com.crud.finance.mapper.UserMapper;
-import com.crud.finance.model.User;
+import com.crud.finance.entity.User;
 import com.crud.finance.repository.UserRepository;
 import com.crud.finance.validator.UserValidator;
 import org.springframework.stereotype.Service;
