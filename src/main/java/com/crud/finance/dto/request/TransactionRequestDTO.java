@@ -1,7 +1,7 @@
 package com.crud.finance.dto.request;
 
-import com.crud.finance.model.User;
-import com.crud.finance.model.enums.TransactionType;
+import com.crud.finance.entity.User;
+import com.crud.finance.entity.enums.TransactionType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
