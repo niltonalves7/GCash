@@ -1,4 +1,4 @@
-package com.crud.finance.model.enums;
+package com.crud.finance.entity.enums;
 
 public enum TransactionType {
     DEPOSIT,
