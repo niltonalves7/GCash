@@ -3,7 +3,7 @@ package com.crud.finance.controller;
 
 import com.crud.finance.dto.request.RegisterRequestDTO;
 import com.crud.finance.dto.response.RegisterResponseDTO;
-import com.crud.finance.model.User;
+import com.crud.finance.entity.User;
 import com.crud.finance.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
