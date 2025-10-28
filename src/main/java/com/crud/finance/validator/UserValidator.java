@@ -2,13 +2,13 @@ package com.crud.finance.validator;
 
 import com.crud.finance.dto.request.RegisterRequestDTO;
 import com.crud.finance.exceptions.BadRequestException;
+import com.crud.finance.repository.UserRepository;
 import org.springframework.stereotype.Component;
 
 import java.util.regex.Pattern;
 
 @Component()
 public class UserValidator {
-
     private static final Pattern EMAIL_PATTERN = Pattern.compile(
             "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$"
     );
