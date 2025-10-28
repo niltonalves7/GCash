@@ -1,6 +1,6 @@
-package com.crud.finance.model;
+package com.crud.finance.entity;
 
-import com.crud.finance.model.enums.TransactionType;
+import com.crud.finance.entity.enums.TransactionType;
 import jakarta.persistence.*;
 import lombok.*;
 
