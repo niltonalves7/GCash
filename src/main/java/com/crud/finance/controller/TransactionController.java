@@ -2,7 +2,7 @@ package com.crud.finance.controller;
 
 import com.crud.finance.dto.request.TransactionRequestDTO;
 import com.crud.finance.dto.response.TransactionResponseDTO;
-import com.crud.finance.model.Transaction;
+import com.crud.finance.entity.Transaction;
 import com.crud.finance.service.TransactionService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
