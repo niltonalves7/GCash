@@ -4,7 +4,7 @@ import com.crud.finance.dto.request.TransactionRequestDTO;
 import com.crud.finance.dto.response.TransactionResponseDTO;
 import com.crud.finance.exceptions.EmptyListException;
 import com.crud.finance.exceptions.ResourceNotFoundException;
-import com.crud.finance.model.Transaction;
+import com.crud.finance.entity.Transaction;
 import com.crud.finance.repository.TransactionRepository;
 import com.crud.finance.mapper.TransactionMapper;
 import com.crud.finance.validator.TransactionValidator;
