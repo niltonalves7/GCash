@@ -1,6 +1,6 @@
 package com.crud.finance.repository;
 
-import com.crud.finance.model.User;
+import com.crud.finance.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
