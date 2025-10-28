@@ -2,7 +2,7 @@ package com.crud.finance.mapper;
 
 import com.crud.finance.dto.request.RegisterRequestDTO;
 import com.crud.finance.dto.response.RegisterResponseDTO;
-import com.crud.finance.model.User;
+import com.crud.finance.entity.User;
 
 public class UserMapper {
 
