@@ -1,6 +1,6 @@
 package com.crud.finance.entity;
 
-import com.crud.finance.entity.enums.Role;
+import com.crud.finance.entity.enums.UserRole;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -33,12 +33,14 @@ public class User implements UserDetails {
     private BigDecimal balance = BigDecimal.ZERO;
 
     @Enumerated(EnumType.STRING)
-    private Role role;
+    private UserRole role;
 
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority("ROLE_" + role.name()));
+        if(this.role == UserRole.ADMIN) return List.of(new SimpleGrantedAuthority("ROLE_ADMIN"),
+        new SimpleGrantedAuthority("ROLE_USER"));
+        else return List.of(new SimpleGrantedAuthority("ROLE_USER"));
     }
 
     @Override
