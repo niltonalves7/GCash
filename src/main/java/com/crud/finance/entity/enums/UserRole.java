@@ -1,16 +1,15 @@
 package com.crud.finance.entity.enums;
 
-public enum Role {
-    ADMIN("ADMIN"),
-    USER("USER");
+import lombok.Getter;
 
-    private String role;
+@Getter
+public enum UserRole {
+    ADMIN("admin"),
+    USER("user");
 
-    Role(String role){
+    private final String role;
+
+    UserRole(String role){
         this.role = role;
-    }
-
-    public String getRole(String role){
-        return role;
     }
 }
