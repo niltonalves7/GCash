@@ -41,8 +41,7 @@ public class SecurityConfig {
                 .cors(Customizer.withDefaults())
                 .authorizeHttpRequests(
                         authentication -> authentication
-                                .requestMatchers(HttpMethod.POST, "/login").permitAll()
-                                .requestMatchers(HttpMethod.POST,"/register").permitAll()// Swagger
+                                .requestMatchers(HttpMethod.POST, "/authentication/register").permitAll()// Swagger
                                 .anyRequest().authenticated()
                 )
 
